@@ -1,50 +1,56 @@
-.card {
-  width: 300px;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-.card img {
-  margin-top: 40px;
-  width: 50%;
-  z-index: 1;
-}
-.card .nat-img {
-  margin-top: 0;
-  width: 50px;
-}
-.card .bg-cover {
-  position: absolute;
-  height: 100px;
-  background-color: rgb(242, 71, 120);
-  width: 100%;
-  top: 0;
+* {
+  font-family: "Raleway", sans-serif;
 }
 
-.friend-list {
-  height: 200px;
-  overflow: scroll;
+#navbar {
+  border-bottom: 1px solid rgb(137, 137, 137);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
-.friend-list li > .info-box img {
-  width: 75px;
-  border-radius: 50%;
-  margin-right: 10px;
+#navbar .container-fluid button i {
+  font-size: 1.5rem;
+  font-style: normal;
 }
-.friend-list li > .info-box .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+#navbar .container-fluid .collapse {
+  width: 100%;
 }
-.friend-list li > .info-box .info h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+#navbar .container-fluid .collapse ul {
+  width: 100%;
 }
-.friend-list li > .info-box .info p {
+#navbar .container-fluid .collapse ul li {
+  border: 1px solid rgb(111, 111, 111);
+}
+#navbar .container-fluid .collapse ul li p {
+  font-size: 0.8rem;
+  margin: 0;
+  width: 40% !important;
+}
+#navbar .container-fluid .collapse ul li img {
+  height: 2rem;
+  width: 2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#navbar .container-fluid .collapse #total-price {
+  font-size: 1.5rem;
+}
+
+.card {
+  margin: 0.5rem !important;
+}
+.card img {
+  height: 8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card h5 {
   font-size: 1rem;
-  font-weight: 400;
-  color: #999;
 }
-.friend-list li > .info-box .info div {
-  width: 300px;
+.card p {
+  font-size: 0.8rem;
+}
+
+.friend-list li {
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ import {createCard, productCard} from "./card.js";
 
 const productsWrapper = document.getElementById('wrapper-products')
 const cardProducts = document.getElementById('card-list')
+const cartCounter = document.querySelector('#cart-counter');
 
 const totalCart = document.getElementById('total-price')
 let productArray = []
@@ -10,13 +11,14 @@ let productArray = []
 const addToCart = (data) => {
     cardProducts.innerHTML= ""
     productArray.push(data)
-    console.log( productArray)
     let result = productArray.reduce( (accum, current) => accum + current.price, 0)
-    totalCart.textContent = `Total: ${result.toFixed(2)}`
+    cartCounter.textContent = ` ${productArray.length}`;
+    totalCart.textContent = `Total: $${result.toFixed(2)}`
     productArray.forEach(product => {
-        let {title, price} = product
-        cardProducts.append(productCard(title, price))
-    })
+        console.log(product);
+        let {title, price, image} = product
+        cardProducts.append(productCard(title, price, image))
+    });
  
 }
 
